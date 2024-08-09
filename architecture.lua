@@ -15,6 +15,11 @@
 │   │   ├── resolvers
 │   │   │   ├── CategoryResolvers.ts
 │   │   │   └── EntityResolvers.ts
+│   │   ├── graphql
+│   │   │   ├── schema.ts
+│   │   │   └── typeDefs.ts
+│   │   ├── helpers
+│   │   │   └── ...
 │   │   └── index.ts
 │   ├── Dockerfile
 │   ├── package-lock.json
@@ -24,12 +29,22 @@
 │   ├── .next
 │   ├── node_modules
 │   ├── public
+│   │   ├── images
+│   │   │   └── ...
+│   │   └── favicon.ico
 │   ├── src
-│   │   ├── app
-│   │   │   ├── globals.css
-│   │   │   ├── layout.tsx
-│   │   │   ├── page.module.css
-│   │   │   └── page.tsx
+│   │   ├── components
+│   │   │   └── ...
+│   │   ├── layouts
+│   │   │   └── ...
+│   │   ├── pages --[[ file based routing ]]
+│   │   │   ├── about.tsx
+│   │   │   ├── contact.tsx
+│   │   │   └── index.tsx
+│   │   ├── styles
+│   │   │   ├── page.module.scss
+│   │   │   └── _variables.scss
+│   │   └── ...
 │   ├── .eslintrc.json
 │   ├── .gitignore
 │   ├── Dockerfile
