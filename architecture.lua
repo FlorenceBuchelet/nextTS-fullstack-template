@@ -1,4 +1,4 @@
---[[ lua is only used here for aesthetic ]]
+--[[ lua is only used here for aesthetics ]]
 
 /root
 ├── backend

@@ -2,8 +2,8 @@
 
 - Next
 - NodeJS
-- Apollo
 - GraphQL
+- Apollo
 - TypeORM
 - SQLite
 - Typescript
@@ -12,12 +12,15 @@
 
 - Docker & Docker compose
 
+## Run
 
-## Next.js
+`docker compose up`
+
+### Next.js
 
 This [Next.js](https://nextjs.org/) project was bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## SQLite
+### SQLite
 
 SQLite is an integrated simple database.
 
@@ -26,13 +29,13 @@ SQLite is an integrated simple database.
 
 ## To do list
 
-Le plan c'est d'avoir un template que je vais pouvoir utiliser pour le tracker mais aussi pour le projet.
+Le plan, c'est d'avoir un template que je vais pouvoir utiliser pour le tracker mais aussi pour le projet.
 La stack complète.
 *si j'utilise telle chose, j'ai besoin de ça.*
 - Next: 
 - NodeJS: 
+- GraphQL: Apollo, CodeGen.
 - Apollo: 
-- GraphQL: 
 - TypeORM: 
 - SQLite: 
 - Typescript: un tsconfig, une organisation pour les interfaces
