@@ -4,14 +4,14 @@ import { dataSource } from "./dataSource";
 
 async function createData(
     title: string,
-    category = Category
+    category: Category
 ) {
     const entity = new EntityClass(title);
     entity.category = category;
     await dataSource.manager.save(entity); 
 }
 
-export async function initData() {
+export async function initTestData() {
     const cat1 = new Category("Cat1");
     const cat2 = new Category("Cat2");
 
