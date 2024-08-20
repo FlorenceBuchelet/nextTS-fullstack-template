@@ -1,4 +1,4 @@
---[[ lua is only used here for aesthetics ]]
+-- lua is only used here for aesthetics
 
 /root
 ├── backend
@@ -34,35 +34,41 @@
 │   │   └── favicon.ico
 │   ├── src
 │   │   ├── components
-│   │   │   └── ...
+│   │   │   ├── componentName
+│   │   │   │   ├── componentName.scss
+│   │   │   │   └── ComponentName.tsx
+│   │   │   └── componentName
+│   │   │       ├── componentName.scss
+│   │   │       └── ComponentName.tsx
 │   │   ├── layouts
-│   │   │   └── ...
-│   │   ├── pages --[[ file based routing ]]
+│   │   │   ├── Footer.tsx
+│   │   │   └── Header.tsx
+│   │   ├── pages -- file based routing
 │   │   │   ├── about.tsx
 │   │   │   ├── contact.tsx
 │   │   │   └── index.tsx
-│   │   ├── styles
-│   │   │   ├── abstracts
-│   │   │   │   ├── _variables.scss    -- Variables globales (couleurs, tailles, etc.)
-│   │   │   │   ├── _mixins.scss       -- Mixins réutilisables
-│   │   │   │   └── _functions.scss    -- Fonctions SCSS
-│   │   │   ├── base
-│   │   │   │   ├── _reset.scss        -- Reset CSS ou normalize
-│   │   │   │   ├── _typography.scss   -- Styles de base pour la typographie
-│   │   │   │   └── _base.scss         -- Styles de base globaux
-│   │   │   ├── layouts
-│   │   │   │   ├── _header.scss       -- Styles pour les layouts (header, footer, etc.)
-│   │   │   │   ├── _footer.scss
-│   │   │   │   └── _grid.scss         -- Styles pour la grille de mise en page
-│   │   │   ├── pages
-│   │   │   │   ├── _index.scss         -- Styles spécifiques aux pages
-│   │   │   │   └── _about.scss
-│   │   │   └── main.scss              -- Point d'entrée principal pour importer tous les fichiers SCSS
+│   │   └── styles
+│   │       ├── abstracts
+│   │       │   ├── _variables.scss
+│   │       │   ├── _mixins.scss
+│   │       │   └── _functions.scss
+│   │       ├── base
+│   │       │   ├── _reset.scss
+│   │       │   ├── _typography.scss
+│   │       │   └── _base.scss
+│   │       ├── layouts
+│   │       │   ├── _header.scss
+│   │       │   ├── _footer.scss
+│   │       │   └── _grid.scss
+│   │       ├── pages
+│   │       │   ├── _index.scss
+│   │       │   └── _about.scss
+│   │       └── main.scss
 │   ├── .eslintrc.json
 │   ├── .gitignore
 │   ├── Dockerfile
 │   ├── next-env.d.ts
-│   ├── next.config.mjs
+│   ├── next.config.mjs -- .mjs uses esnext as module format
 │   ├── package-lock.json
 │   ├── package.json
 │   └── tsconfig.json
