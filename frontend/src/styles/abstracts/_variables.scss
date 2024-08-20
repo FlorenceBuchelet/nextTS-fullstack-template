@@ -1,3 +1,16 @@
-.lime {
-  border: 2px solid lime;
-}
+$main-highlight: rgb(173, 0, 0);
+$light-highlight: lighten($main-highlight, 40%);
+$dark-highlight: darken($main-highlight, 20%);
+
+
+$border-color: $main-highlight;
+$background-color: rgb(207, 207, 207);
+$background-neutral: rgb(226, 226, 226);
+
+
+// Links
+$base-link: $main-highlight;
+$visited-link: $light-highlight;
+$active-link: blue;
+$hovered-link: $dark-highlight;
+$focused-link: red;

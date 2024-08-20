@@ -41,9 +41,10 @@
 │   │   │       ├── componentName.scss
 │   │   │       └── ComponentName.tsx
 │   │   ├── layouts
+│   │   │   ├── Layout.tsx -- main layout
 │   │   │   ├── Footer.tsx
 │   │   │   └── Header.tsx
-│   │   ├── pages -- file based routing
+│   │   ├── pages -- !! file based routing
 │   │   │   ├── about.tsx
 │   │   │   ├── contact.tsx
 │   │   │   └── index.tsx
@@ -68,7 +69,7 @@
 │   ├── .gitignore
 │   ├── Dockerfile
 │   ├── next-env.d.ts
-│   ├── next.config.mjs -- .mjs uses esnext as module format
+│   ├── next.config.mjs -- .mjs needs esnext as module format
 │   ├── package-lock.json
 │   ├── package.json
 │   └── tsconfig.json
