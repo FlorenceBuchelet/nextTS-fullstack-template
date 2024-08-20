@@ -1,5 +1,5 @@
 import Layout from "@/layouts/Layout";
-import "@/styles/_variables.scss";
+import '../styles/main.scss';
 import type { AppProps } from "next/app";
 import dynamic from "next/dynamic";
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
