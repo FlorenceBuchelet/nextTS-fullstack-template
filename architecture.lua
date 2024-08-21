@@ -7,11 +7,12 @@
 │   ├── node_modules
 │   ├── src
 │   │   ├── dataSource
+│   │   │   ├── cleanDB.ts
 │   │   │   ├── dataSource.ts
 │   │   │   └── initTestData.ts
 │   │   ├── entities
 │   │   │   ├── Category.ts
-│   │   │   └── Entity.ts
+│   │   │   └── Element.ts
 │   │   ├── resolvers
 │   │   │   ├── CategoryResolvers.ts
 │   │   │   └── EntityResolvers.ts

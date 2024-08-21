@@ -1,6 +1,6 @@
 import { Field, ID, ObjectType } from "type-graphql";
 import { BaseEntity, Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
-import { EntityClass } from "./EntityClass";
+import { Example } from "./Example";
 
 @Entity()
 @ObjectType()
@@ -14,9 +14,9 @@ export class Category extends BaseEntity {
     @Field()
     title: string;
 
-    @OneToMany(() => EntityClass, entity => entity.category)
-    @Field(_ => [EntityClass])
-    entities?: Promise<EntityClass[]>;
+    @OneToMany(() => Example, entity => entity.category)
+    @Field(_ => [Example])
+    examples?: Promise<Example[]>;
 
     constructor(
         title: string = ""

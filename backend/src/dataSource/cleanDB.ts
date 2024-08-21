@@ -1,8 +1,8 @@
 import { Category } from "../entities/Category";
-import { EntityClass } from "../entities/EntityClass";
+import { Example } from "../entities/Example";
 import { dataSource } from "./dataSource";
 
 export async function cleanDB() {
-    await dataSource.manager.clear(EntityClass);
+    await dataSource.manager.clear(Example);
     await dataSource.manager.clear(Category);
 }

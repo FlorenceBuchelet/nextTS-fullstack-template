@@ -1,14 +1,14 @@
 import { Category } from "../entities/Category";
-import { EntityClass } from "../entities/EntityClass";
+import { Example } from "../entities/Example";
 import { dataSource } from "./dataSource";
 
 async function createData(
     title: string,
     category: Category
 ) {
-    const entity = new EntityClass(title);
-    entity.category = category;
-    await dataSource.manager.save(entity);
+    const example = new Example(title);
+    example.category = category;
+    await dataSource.manager.save(example);
 }
 
 export async function initTestData() {

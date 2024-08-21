@@ -4,7 +4,7 @@ import { Category } from "./Category";
 
 @Entity()
 @ObjectType()
-export class EntityClass extends BaseEntity {
+export class Example extends BaseEntity {
 
     @PrimaryGeneratedColumn()
     @Field(_ => ID)
@@ -14,7 +14,7 @@ export class EntityClass extends BaseEntity {
     @Field()
     title: string;
 
-    @ManyToOne(() => Category, category => category.entities, { eager: true})
+    @ManyToOne(() => Category, category => category.examples, { eager: true})
     @Field(_ => Category)
     category?: Category;
 
