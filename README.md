@@ -39,3 +39,7 @@ La stack complète.
 - TypeORM: 
 - SQLite: 
 - Typescript: un tsconfig, une organisation pour les interfaces
+
+
+TODO:
+- enlever le cleanDB pour remplacer par un volume

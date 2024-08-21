@@ -4,7 +4,7 @@ import { EntityResolver } from "./resolvers/EntityResolver";
 import { ApolloServer } from "@apollo/server";
 import { startStandaloneServer } from "@apollo/server/standalone";
 import { dataSource } from "./dataSource/dataSource";
-//import { cleanDB } from "./dataSource/cleanDB";
+import { cleanDB } from "./dataSource/cleanDB";
 import { initTestData } from "./dataSource/initTestData";
 
 const port = 4000;
@@ -20,8 +20,8 @@ export async function startServerApollo() {
     await dataSource.initialize();
 
     // FIXME: Uncomment this if needed
-    // await cleanDB();
-    await initTestData();
+    //await cleanDB();
+    //await initTestData();
 
     const { url } = await startStandaloneServer(server, {
         listen: { port },

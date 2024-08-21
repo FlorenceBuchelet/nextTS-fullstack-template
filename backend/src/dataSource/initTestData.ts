@@ -1,5 +1,5 @@
 import { Category } from "../entities/Category";
-import { EntityClass } from "../entities/Entity";
+import { EntityClass } from "../entities/EntityClass";
 import { dataSource } from "./dataSource";
 
 async function createData(
@@ -8,7 +8,7 @@ async function createData(
 ) {
     const entity = new EntityClass(title);
     entity.category = category;
-    await dataSource.manager.save(entity); 
+    await dataSource.manager.save(entity);
 }
 
 export async function initTestData() {
@@ -18,6 +18,6 @@ export async function initTestData() {
     await dataSource.manager.save(cat1);
     await dataSource.manager.save(cat2);
 
-    await createData("This is a test", cat1),
-    await createData("A very testy one", cat2)
+    await createData("This is a test", cat1);
+    await createData("A very testy one", cat2);
 }
