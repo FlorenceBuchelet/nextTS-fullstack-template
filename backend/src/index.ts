@@ -20,7 +20,7 @@ export async function startServerApollo() {
 
     await dataSource.initialize();
 
-    // FIXME: Uncomment this if needed
+    // FIXME: Comment this after first launch to avoid doubles
     //await cleanDB();
     //await initTestData();
 

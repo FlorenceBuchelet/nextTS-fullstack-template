@@ -16,6 +16,8 @@
 
 `docker compose up`
 
+After first run, comment functions `cleanDB` and `initTestData` in `backend/src/index.ts` to avoid doubles in data and bad ID incrementation.
+
 ### Next.js
 
 This [Next.js](https://nextjs.org/) project was bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
