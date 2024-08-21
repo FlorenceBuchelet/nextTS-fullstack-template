@@ -15,9 +15,6 @@
 │   │   ├── resolvers
 │   │   │   ├── CategoryResolvers.ts
 │   │   │   └── EntityResolvers.ts
-│   │   ├── graphql
-│   │   │   ├── schema.ts
-│   │   │   └── typeDefs.ts
 │   │   ├── helpers
 │   │   │   └── ...
 │   │   └── index.ts
@@ -40,11 +37,19 @@
 │   │   │   └── componentName
 │   │   │       ├── componentName.scss
 │   │   │       └── ComponentName.tsx
+│   │   ├── graphQL
+│   │   │   ├── fragments
+│   │   │   │   └── ...
+│   │   │   ├── mutations
+│   │   │   │   └── ...
+│   │   │   ├── queries
+│   │   │   │   └── ...
+│   │   │   └── gql.ts
 │   │   ├── layouts
-│   │   │   ├── Layout.tsx -- main layout
+│   │   │   ├── Layout.tsx              -- main layout
 │   │   │   ├── Footer.tsx
 │   │   │   └── Header.tsx
-│   │   ├── pages -- !! file based routing
+│   │   ├── pages                       -- !! file based routing
 │   │   │   ├── about.tsx
 │   │   │   ├── contact.tsx
 │   │   │   └── index.tsx
@@ -69,7 +74,7 @@
 │   ├── .gitignore
 │   ├── Dockerfile
 │   ├── next-env.d.ts
-│   ├── next.config.mjs -- .mjs needs esnext as module format
+│   ├── next.config.mjs                 -- .mjs needs esnext as module format
 │   ├── package-lock.json
 │   ├── package.json
 │   └── tsconfig.json
