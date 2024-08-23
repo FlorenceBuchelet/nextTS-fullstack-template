@@ -71,6 +71,8 @@
 │   │       │   ├── _index.scss
 │   │       │   └── _about.scss
 │   │       └── main.scss
+│   ├── .env
+│   ├── .env.sample
 │   ├── .eslintrc.json
 │   ├── .gitignore
 │   ├── Dockerfile
