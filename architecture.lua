@@ -44,7 +44,7 @@
 │   │   │   ├── mutations
 │   │   │   │   └── ...
 │   │   │   ├── queries
-│   │   │   │   └── ...
+│   │   │   │   └── getSomeExamples.ts
 │   │   │   └── gql.ts
 │   │   ├── layouts
 │   │   │   ├── Layout.tsx              -- main layout
@@ -54,23 +54,26 @@
 │   │   │   ├── about.tsx
 │   │   │   ├── contact.tsx
 │   │   │   └── index.tsx
-│   │   └── styles
-│   │       ├── abstracts
-│   │       │   ├── _variables.scss
-│   │       │   ├── _mixins.scss
-│   │       │   └── _functions.scss
-│   │       ├── base
-│   │       │   ├── _reset.scss
-│   │       │   ├── _typography.scss
-│   │       │   └── _base.scss
-│   │       ├── layouts
-│   │       │   ├── _header.scss
-│   │       │   ├── _footer.scss
-│   │       │   └── _grid.scss
-│   │       ├── pages
-│   │       │   ├── _index.scss
-│   │       │   └── _about.scss
-│   │       └── main.scss
+│   │   ├── styles
+│   │   │   ├── abstracts
+│   │   │   │   ├── _variables.scss
+│   │   │   │   ├── _mixins.scss
+│   │   │   │   └── _functions.scss
+│   │   │   ├── base
+│   │   │   │   ├── _reset.scss
+│   │   │   │   ├── _typography.scss
+│   │   │   │   └── _base.scss
+│   │   │   ├── layouts
+│   │   │   │   ├── _header.scss
+│   │   │   │   ├── _footer.scss
+│   │   │   │   └── _grid.scss
+│   │   │   ├── pages
+│   │   │   │   ├── _index.scss
+│   │   │   │   └── _about.scss
+│   │   │   └── main.scss
+│   │   └── types
+│   │       ├── Category.d.ts
+│   │       └── Example.d.ts
 │   ├── .env
 │   ├── .env.sample
 │   ├── .eslintrc.json
