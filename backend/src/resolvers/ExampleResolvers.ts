@@ -5,8 +5,8 @@ import { Category } from "../entities/Category";
 @Resolver(Example)
 export class ExampleResolver {
 
-    //GetSomeExamples
-    //If 'take' is undefined, return all examples
+    // Get some Examples
+    // If 'take' is undefined, return all examples
     @Query(type => [Example])
     async getSomeExamples(@Arg("limit", { nullable: true }) limit?: number): Promise<Example[]> {
         const examples: Example[] = await Example.find({
@@ -38,6 +38,44 @@ export class ExampleResolver {
         }
         await example.save();
         return example;
+    }
+
+    // Update an Example
+    @Mutation(() => Example, { nullable: true })
+    async updateExample(
+        @Arg("id") id: number,
+        @Arg("title", { nullable: true }) title?: string,
+        @Arg("categoryId", { nullable: true }) categoryId?: number
+    ): Promise<Example | null> {
+        try {
+            // Find the right Example
+            const example = await Example.findOneBy({ id });
+            if (!example) {
+                console.error(`Unassigned Id ${id}`);
+                return null;
+            }
+            // Update provided fields
+            if (title !== undefined) {
+                example.title = title;
+            }
+            if (categoryId !== undefined) {
+                // Find the right Category
+                const category = await Category.findOneBy({ id: categoryId });
+                // Update Example
+                if (category) {
+                    example.category = category;
+                } else {
+                    console.error("Unrecognized ID category: ", categoryId)
+                    return null;
+                }
+            }
+            // Save and return the updated Example
+            await example.save();
+            return example;
+        } catch (error) {
+            console.error("Failed to update id: ", error);
+            return null;
+        }
     }
 
     // Delete an Example
