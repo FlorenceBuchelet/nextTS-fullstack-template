@@ -1,4 +1,4 @@
-import { GET_SOME_EXAMPLES } from "@/graphQL/queries/getSomeExamples";
+import { GET_SOME_EXAMPLES } from "@/graphQL/queries/getSome";
 import { Example } from "@/types/Example";
 import { useQuery } from "@apollo/client";
 

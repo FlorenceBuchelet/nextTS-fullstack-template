@@ -3,11 +3,24 @@ import { gql } from "@apollo/client";
 export const GET_SOME_EXAMPLES = gql`
 query GetSomeExamples {
     getSomeExamples {
-        title
         id
+        title
         category {
-            title
             id
+            title
+        }
+    }
+}
+`;
+
+export const GET_SOME_CATEGORIES = gql`
+query getSomeCategories {
+    getSomeCategories {
+        id
+        title
+        examples {
+            id
+            title
         }
     }
 }
