@@ -26,18 +26,22 @@ export class ExampleResolver {
     async createExample(
         @Arg("title") title: string,
         @Arg("categoryId", { nullable: true }) categoryId?: number
-    ): Promise<Example> {
-        const example = new Example();
-        example.title = title;
-
-        if (categoryId) {
-            const category = await Category.findOne({ where: { id: categoryId } });
-            if (category) {
-                example.category = category;
+    ): Promise<Example | null> {
+        try {
+            const example = new Example();
+            example.title = title;
+            if (categoryId) {
+                const category = await Category.findOne({ where: { id: categoryId } });
+                if (category) {
+                    example.category = category;
+                }
             }
+            await example.save();
+            return example;
+        } catch (error) {
+            console.error("Creation failed. ", error);
+            return null;
         }
-        await example.save();
-        return example;
     }
 
     // Update an Example
@@ -73,7 +77,7 @@ export class ExampleResolver {
             await example.save();
             return example;
         } catch (error) {
-            console.error("Failed to update id: ", error);
+            console.error("Failed to update id: ", id, error);
             return null;
         }
     }
@@ -85,7 +89,7 @@ export class ExampleResolver {
             const result = await Example.delete(id);
             return result.affected !== 0; // Returns true if a row has been affected
         } catch (error) {
-            console.error("Failed to delete id: ", error);
+            console.error("Failed to delete id: ", id, error);
             return false;
         }
     }

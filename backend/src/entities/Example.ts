@@ -14,8 +14,8 @@ export class Example extends BaseEntity {
     @Field()
     title: string;
 
-    @ManyToOne(() => Category, category => category.examples, { eager: true})
-    @Field(_ => Category)
+    @ManyToOne(() => Category, category => category.examples, { eager: true, onDelete: "SET NULL" })
+    @Field(_ => Category, { nullable: true })
     category?: Category;
 
     constructor(
