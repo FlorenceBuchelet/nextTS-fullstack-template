@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    /* This allows us to use placeholder images from placehold.co */
+    /* Delete when useless */
     images: {
         remotePatterns: [
             {
@@ -11,6 +13,7 @@ const nextConfig = {
         ],
         dangerouslyAllowSVG: true
     },
+    /* End placeholder */
 };
 
 export default nextConfig;
