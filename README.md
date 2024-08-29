@@ -36,7 +36,7 @@ La stack complète.
 *si j'utilise telle chose, j'ai besoin de ça.*
 - Next: 
 - NodeJS: 
-- GraphQL: Apollo, CodeGen.
+- GraphQL: Apollo, CodeGen, Type-GraphQL.
 - Apollo: 
 - TypeORM: 
 - SQLite: 

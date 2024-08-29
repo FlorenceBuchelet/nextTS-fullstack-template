@@ -1,24 +1,37 @@
 import { GET_SOME_EXAMPLES } from "@/graphQL/queries/getSome";
 import { Example } from "@/types/Example";
-import { useQuery } from "@apollo/client";
+import { GetServerSideProps } from "next";
+import { initializeApollo } from "@/lib/apolloClient"; 
 
-export default function Index() {
+interface Props {
+    examples: Example[];
+}
+
+export default function Index({ examples }: Props) {
     const env = process.env.NEXT_PUBLIC_YOUR_SECRET;
 
-    const { loading, error, data } = useQuery(GET_SOME_EXAMPLES);
+    return (
+        <>
+            <div>Index: {env}</div>
+            {examples.map((element: Example) => (
+                <p key={element.id}>{element.title} {element.category ? `from ${element.category?.title}` : null}</p>
+            ))}
+        </>
+    );
+}
 
-    if (loading) return <p>Loading...</p>;
-    if (error) return <p>An error occured.</p>;
-    if (data) {
-        const { getSomeExamples } = data;
+export const getServerSideProps: GetServerSideProps = async () => {
+    const apolloclient = initializeApollo();
 
-        return (
-            <>
-                <div>Index: {env}</div>
-                {getSomeExamples.map((element: Example) => (
-                    <p key={element.id}>{element.title} {element.category ? `from ${element.category?.title}` : null}</p>
-                ))}
-            </>
-        );
+    const { data } = await apolloclient.query({
+        query: GET_SOME_EXAMPLES,
+    });
+
+    return {
+        props: {
+            example: data.getSomeExamples,
+        }
     }
 }
+
+// MARCHE PAS
